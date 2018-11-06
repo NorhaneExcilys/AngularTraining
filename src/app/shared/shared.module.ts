@@ -1,16 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StrToArrayPipe } from './pipes/str-to-array.pipe';
+import { MyDirectiveDirective } from './my-directive.directive';
 
 @NgModule({
   declarations: [
-    StrToArrayPipe
+    StrToArrayPipe,
+    MyDirectiveDirective
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    StrToArrayPipe
+    StrToArrayPipe,
+    MyDirectiveDirective
   ]
 })
 export class SharedModule { }

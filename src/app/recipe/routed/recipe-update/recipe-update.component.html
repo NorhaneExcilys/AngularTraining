@@ -1,0 +1,17 @@
+<form *ngIf="recipe" [formGroup]="updateForm" (ngSubmit)="update()">
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Name" formControlName="name">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Picture" formControlName="picture">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Description" formControlName="description">
+  </mat-form-field>
+
+  <button type="submit">Update recipe</button>
+
+</form>

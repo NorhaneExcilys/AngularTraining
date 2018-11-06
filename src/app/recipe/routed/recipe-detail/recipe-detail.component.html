@@ -15,8 +15,8 @@
           </ul>
           <h2>Instructions</h2>
           <ul>
-              <!-- <li *ngFor="let instruction of recipe.instructions | strToArray" >{{instruction}}</li> -->
-              <li *ngFor="let instruction of recipe.instructions" >{{instruction}}</li>
+              <li *ngFor="let instruction of recipe.instructions | strToArray" >{{instruction}}</li>
+              <!-- <li *ngFor="let instruction of recipe.instructions" >{{instruction}}</li> -->
           </ul>
       </div>
 
@@ -27,7 +27,8 @@
         <ng-template ngPluralCase="=false">Expand</ng-template>
         <ng-template ngPluralCase="=true">Collapse</ng-template>
       </button>
-      <button *ngIf="showInformations" mat-raised-button color="primary">#</button>
+      <button *ngIf="!showInformations" mat-raised-button color="primary" (click)="deleteRecipe(recipe.id)">Delete</button>
+      <a href="" routerLink="/recipes/update/{{ recipe.id }}">Update recipe</a><br/>
       <a href="" routerLink="/recipes/{{ recipe.id }}">Show details</a>
     </mat-card-actions>
   </mat-card>

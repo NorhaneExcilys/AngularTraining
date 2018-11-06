@@ -1,0 +1,14 @@
+
+ <mat-form-field class="example-full-width">
+  <input matInput placeholder="Name" [(ngModel)]="recipe.name"><br/>
+</mat-form-field>
+
+<mat-form-field class="example-full-width">
+  <input matInput placeholder="Picture" [(ngModel)]="recipe.picture"><br/>
+</mat-form-field>
+
+<mat-form-field class="example-full-width">
+  <input matInput placeholder="Description" [(ngModel)]="recipe.description"><br/>
+</mat-form-field>
+
+<button mat-raised-button color="primary" (click)="addRecipe()">Add recipe</button>

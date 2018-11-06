@@ -6,18 +6,26 @@ import { SharedModule } from '../shared/shared.module';
 import { CustomMaterialModule } from '../custom-material/custom-material.module';
 import { RecipeOverviewComponent } from './routed/recipe-overview/recipe-overview.component';
 import { RouterModule } from '@angular/router';
+import { RecipeAddComponent } from './routed/recipe-add/recipe-add.component';
+import { FormsModule } from '@angular/forms';
+import { RecipeUpdateComponent } from './routed/recipe-update/recipe-update.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     RecipeListComponent,
     RecipeDetailComponent,
-    RecipeOverviewComponent
+    RecipeOverviewComponent,
+    RecipeAddComponent,
+    RecipeUpdateComponent
   ],
   imports: [
     CommonModule,
     SharedModule,
     CustomMaterialModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class RecipeModule { }
